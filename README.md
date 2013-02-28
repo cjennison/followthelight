@@ -1,4 +1,4 @@
-cheesehunter
+Follow The Light
 ============
 
-Cheese Hunter
+Follow the light!
