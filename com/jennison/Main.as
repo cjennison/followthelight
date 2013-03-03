@@ -186,16 +186,16 @@ package com.jennison
 		{
 			if(background.assets.hitTestPoint(player.x + leftBumpPoint.x, player.y + leftBumpPoint.y, true)){
 				trace("leftBumping");
-				leftBumping = true;
+				//leftBumping = true;
 			} else {
-				leftBumping = false;
+				//leftBumping = false;
 			}
 
 			if(background.assets.hitTestPoint(player.x + rightBumpPoint.x, player.y + rightBumpPoint.y, true)){
 				trace("rightBumping");
-				rightBumping = true;
+				//rightBumping = true;
 			} else {
-				rightBumping = false;
+				//rightBumping = false;
 			}
 
 			if(background.assets.hitTestPoint(player.x + upBumpPoint.x, player.y + upBumpPoint.y, true)){
