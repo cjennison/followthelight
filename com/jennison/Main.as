@@ -40,15 +40,15 @@ package com.jennison
 		var ySpeed:Number = 0;
 
 		var speedConstant:Number = 4;
-		var frictionConstant:Number = 0.6;
-		var gravityConstant:Number = 3.9;
-		var jumpConstant:Number = -95;
+		var frictionConstant:Number = 0.9;
+		var gravityConstant:Number = 1.8;
+		var jumpConstant:Number = -35;
 		var maxSpeedConstant:Number = 18;
 		var jumped:Boolean = false;
 		var readyToJump:Boolean = true;
 		
-		private var cloudTimer:Timer = new Timer(2000);
-		var lastY:Number = -450;
+		private var cloudTimer:Timer = new Timer(200);
+		var lastY:Number = -400;
 		
 		public function Main() 
 		{
@@ -68,8 +68,8 @@ package com.jennison
 		private function createNewCloud(e:TimerEvent):void 
 		{
 			var cloud:Cloud = new Cloud();
-			cloud.x = Math.random() * stage.stageWidth;
-			var height = lastY - (Math.random() * 40) - 40;
+			cloud.x = Math.random() * stage.stageWidth - cloud.width/2;
+			var height = lastY - 120;
 			cloud.y = height;
 			lastY = height;
 			background.assets.addChild(cloud);
@@ -169,8 +169,8 @@ package com.jennison
 			
 			
 			
-			xSpeed *= frictionConstant;
-			ySpeed *= frictionConstant;
+			xSpeed *= (frictionConstant - .3);
+			ySpeed *= (frictionConstant);
 			
 			scrollX -= xSpeed;
 			scrollY -= ySpeed;
